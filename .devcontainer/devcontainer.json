@@ -1,0 +1,15 @@
+{
+  "name": "iam57-bot",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    5705
+  ],
+  "postCreateCommand": "pdm install",
+  "customizations": {
+    "jetbrains": {
+      "backend": "PyCharm"
+    }
+  }
+}
