@@ -1,6 +1,6 @@
 [project]
 name = "iam57-bot"
-version = "0.1.0"
+version = "1.0.0_beta"
 description = "iam57's bot."
 readme = "README.md"
 requires-python = ">=3.10, <3.12"
@@ -9,6 +9,9 @@ dependencies = [
     "nonebot2[fastapi]>=2.2.1",
     "nonebot2[websockets]>=2.2.1",
     "httpx>=0.27.0",
+    "aiosqlite>=0.17.0",
+    "tortoise-orm[aiosqlite]>=0.21.5",
+    "nonebot-plugin-alconna>=0.45.0",
 ]
 
 [tool.nonebot]
