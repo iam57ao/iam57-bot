@@ -13,6 +13,7 @@ alist_cmd = on_alconna(
             "account",
             Subcommand("add"),
             Subcommand("del"),
+            Subcommand("info"),
             Subcommand("list"),
             Subcommand("switch")
         )
