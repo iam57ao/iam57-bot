@@ -1,9 +1,6 @@
 from typing import Dict, Optional
 from pydantic import BaseModel, ConfigDict
 
-from nonebot.adapters import Event
-from nonebot_plugin_alconna import AlconnaMatcher, At, UniMessage
-
 from ..enum import DeletePolicy, DownloadTool
 from ..models import User
 
@@ -36,13 +33,3 @@ class AlistUserManager:
     @classmethod
     def remove_by_user_id(cls, user_id: str) -> None:
         cls._alist_users.pop(user_id, None)
-
-
-async def get_alist_user(matcher: AlconnaMatcher, event: Event) -> AlistUser:
-    user_id = event.get_user_id()
-    alist_user = await AlistUserManager.get_by_user_id(user_id)
-    if not alist_user:
-        await matcher.finish(
-            UniMessage([At("user", event.get_user_id()), "【Alist】您未登录任何账号!"])
-        )
-    return alist_user

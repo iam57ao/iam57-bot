@@ -5,7 +5,8 @@ from nonebot.params import Depends
 from nonebot_plugin_alconna import At
 
 from ..alist_cmd import alist_cmd
-from ...context import AlistUser, get_alist_user
+from ...context import AlistUser
+from ...dependency import get_alist_user
 from ...message import account_info_msg
 
 account_info_cmd = alist_cmd.dispatch("account.info")
