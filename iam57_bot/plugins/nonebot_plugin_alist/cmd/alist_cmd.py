@@ -13,6 +13,7 @@ alist_cmd = on_alconna(
         ),
         Subcommand("logout"),
         Subcommand("me"),
+        Subcommand("pwd"),
         Subcommand("relogin"),
         Subcommand(
             "account",
