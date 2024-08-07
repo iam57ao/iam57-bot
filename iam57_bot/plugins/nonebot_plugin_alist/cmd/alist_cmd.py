@@ -8,6 +8,7 @@ alist_cmd = on_alconna(
     Alconna(
         "alist",
         Subcommand("logout"),
+        Subcommand("me"),
         Subcommand("relogin"),
         Subcommand(
             "account",
