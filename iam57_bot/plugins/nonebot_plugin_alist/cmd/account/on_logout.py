@@ -16,8 +16,8 @@ logout_cmd = alist_cmd.dispatch("logout")
 @logout_cmd.handle()
 async def _(
         event: Event,
-        alist_user: Annotated[AlistUser,
-        Depends(get_alist_user)], state: T_State
+        alist_user: Annotated[AlistUser, Depends(get_alist_user)],
+        state: T_State
 ):
     main_account = await alist_user.user_account.get_main_account()
     site_url = main_account.site_url
@@ -56,7 +56,7 @@ async def _(confirm: Annotated[str, EventPlainText()], state: T_State):
         else:
             await logout_cmd.finish(
                 At("user", user_id) +
-                "【Alist】您已切换到账户:\n"+
+                "【Alist】您已切换到账户:\n" +
                 account_info_msg(main_account)
             )
     else:
