@@ -1,12 +1,16 @@
 from nonebot import require
 
 require("nonebot_plugin_alconna")
-from arclet.alconna import Alconna, Subcommand
+from arclet.alconna import Alconna, Args, Subcommand
 from nonebot_plugin_alconna import on_alconna
 
 alist_cmd = on_alconna(
     Alconna(
         "alist",
+        Subcommand(
+            "cd",
+            Args["path", str]
+        ),
         Subcommand("logout"),
         Subcommand("me"),
         Subcommand("relogin"),
