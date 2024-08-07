@@ -1,4 +1,5 @@
-from ..util.request import async_client
+from ..context import AlistUser
+from ..request import async_client, authenticated_client
 
 
 async def login_hash(site_url: str, username: str, password_hash: str):
@@ -10,4 +11,10 @@ async def login_hash(site_url: str, username: str, password_hash: str):
                 "password": password_hash
             }
         )
+        return resp.json()
+
+
+async def me(alist_user: AlistUser):
+    async with await authenticated_client(alist_user) as client:
+        resp = await client.get("/api/me")
         return resp.json()
