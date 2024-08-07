@@ -10,5 +10,5 @@ class DeletePolicy(StrEnum):
 
 class DownloadTool(StrEnum):
     ARIA2 = "aria2"
-    Http = "SimpleHttp"
+    HTTP = "SimpleHttp"
     QBITTORRENT = "qBittorrent"

@@ -6,7 +6,7 @@ from ..models import User
 
 
 class AlistUser(BaseModel):
-    default_path: str = "/"
+    path: str = "/"
     user_account: Optional[User] = None
     delete_policy: DeletePolicy = DeletePolicy.SUCCEED
     download_tool: DownloadTool = DownloadTool.QBITTORRENT
