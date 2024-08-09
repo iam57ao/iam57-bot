@@ -12,6 +12,15 @@ alist_cmd = on_alconna(
             Args["path#目录路径", str],
             help_text="进入指定目录"
         ),
+        Subcommand(
+            "download",
+            Subcommand(
+                "add",
+                Args["urls#一条或多条链接, 以空格分隔", str],
+                help_text="添加一条或多条下载链接"
+            ),
+            help_text="Alist离线下载的操作"
+        ),
         Subcommand("help", help_text="显示所有可用命令的帮助信息"),
         Subcommand("logout", help_text="退出当前登录的Alist账户"),
         Subcommand(
