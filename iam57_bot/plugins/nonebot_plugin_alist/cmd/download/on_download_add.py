@@ -52,6 +52,6 @@ async def _(
     tasks: list = data["tasks"]
     await download_add_cmd.finish(
         At("user", user_id) +
-        f"添加成功{len(tasks)}个任务!\n"
+        f"【Alist】添加成功{len(tasks)}个任务!\n"
         f"{task_list_msg(tasks)}"
     )
