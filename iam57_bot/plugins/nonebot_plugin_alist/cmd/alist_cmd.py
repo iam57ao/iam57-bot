@@ -19,6 +19,11 @@ alist_cmd = on_alconna(
                 Args["urls#一条或多条链接, 以空格分隔", str],
                 help_text="添加一条或多条下载链接"
             ),
+            Subcommand(
+                "cancel",
+                Args["tid#任务ID", str],
+                help_text="取消一个下载任务"
+            ),
             Subcommand("list", help_text="列出所有下载链接"),
             help_text="Alist离线下载的操作"
         ),
