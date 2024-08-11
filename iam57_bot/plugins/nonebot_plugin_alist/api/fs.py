@@ -40,3 +40,23 @@ async def fs_list(
             }
         )
         return resp.json()
+
+
+async def add_offline_download(
+        alist_user: AlistUser,
+        urls: list[str],
+        path: str,
+        tool: str,
+        delete_policy: str
+):
+    async with await authenticated_client(alist_user) as client:
+        resp = await client.post(
+            "/api/fs/add_offline_download",
+            json={
+                "urls": urls,
+                "path": path,
+                "tool": tool,
+                "delete_policy": delete_policy
+            }
+        )
+        return resp.json()
