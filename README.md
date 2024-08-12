@@ -47,39 +47,42 @@
 
 ### 通过 Docker 部署
 
-使用 `docker-compose` 部署项目：
-
-1. 克隆项目代码：
+1. 拉取 Docker 镜像：
 
     ```bash
-    git clone https://github.com/iam57ao/iam57-bot.git
-    cd iam57-bot
+    docker pull iam57ao/iam57-bot:latest
     ```
 
-2. 创建并启动容器：
+2. 创建并运行容器：
 
     ```bash
-    docker-compose up -d
+    docker run -d \
+        --name iam57-bot \
+        -p 5705:5705 \
+        -e PORT=5705 \
+        -e DRIVER=~fastapi+~websockets \
+        -e COMMAND_SEP='[".", " "]' \
+        iam57ao/iam57-bot:latest
     ```
 
 ### 环境变量
 
-环境变量配置文件包括：
+在使用 **Iam57-Bot** 项目时，可以通过设置以下环境变量来配置应用程序：
 
-- **.env**：通用环境变量配置
-- **.env.dev**：开发环境配置
-- **.env.prod**：生产环境配置
+- `DRIVER`：指定驱动程序，格式类似 `~fastapi+~websockets`。
+- `COMMAND_SEP`：命令分隔符，格式类似 `[".", " "]`。
 
-请根据NoneBot2官方文档进行配置。通过 `docker-compose` 部署默认开放5705端口。
+请根据 [NoneBot2 官方文档](https://nonebot.dev/docs/appendices/config#%E5%86%85%E7%BD%AE%E9%85%8D%E7%BD%AE%E9%A1%B9)
+进行详细配置。
 
 ## 使用 Dev Container 作为开发模板
 
 要使用 Dev Container 作为开发模板，请按照以下步骤操作：
 
-1. 克隆项目代码：
+1. 克隆项目代码的 `template` 分支：
 
     ```bash
-    git clone https://github.com/iam57ao/iam57-bot.git
+    git clone -b template https://github.com/iam57ao/iam57-bot.git
     cd iam57-bot
     ```
 
