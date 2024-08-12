@@ -11,6 +11,8 @@ COPY . .
 
 ENV PATH=/root/.local/bin:$PATH
 
+ENV ENVIRONMENT=prod
+
 RUN pdm install
 
 CMD ["nb", "run"]
