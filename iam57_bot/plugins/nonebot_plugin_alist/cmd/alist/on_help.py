@@ -1,6 +1,6 @@
 from arclet.alconna import command_manager
 
-from .alist_cmd import alist_cmd
+from iam57_bot.plugins.nonebot_plugin_alist.cmd.alist_commands import alist_cmd
 
 help_cmd = alist_cmd.dispatch("help")
 
