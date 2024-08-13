@@ -12,6 +12,7 @@ dependencies = [
     "aiosqlite>=0.17.0",
     "tortoise-orm[aiosqlite]>=0.21.5",
     "nonebot-plugin-alconna>=0.45.0",
+    "ruff>=0.5.7",
 ]
 
 [tool.nonebot]
