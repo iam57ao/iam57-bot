@@ -3,7 +3,7 @@
 **Iam57-Bot** 是五七的机器人后端，基于 **Nonebot2** 框架。本仓库用于整合个人开发的插件，并实现快速部署。
 
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 
 ## 目录
 

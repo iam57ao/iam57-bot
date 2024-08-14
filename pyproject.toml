@@ -1,6 +1,6 @@
 [project]
 name = "iam57-bot"
-version = "1.0.0"
+version = "1.1.0"
 description = "iam57's bot."
 readme = "README.md"
 requires-python = ">=3.10, <3.12"
